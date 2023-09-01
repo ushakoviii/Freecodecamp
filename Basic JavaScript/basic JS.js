@@ -54,3 +54,12 @@ const lastName = "Lovelace";
 
 // Змініть код лише під цим рядком
 const secondToLastLetterOfLastName = lastName[lastName.length-2];// Змініть цей рядок
+
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+// Змініть код лише під цим рядком
+const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + "."; // Змініть цей рядок
+// Змініть код лише над цим рядком
