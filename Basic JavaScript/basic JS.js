@@ -35,3 +35,10 @@ c -= 1;
 var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
 
 const myStr = "FirstLine\n\t\\SecondLine\nThirdLine"; // Change this line
+
+// Налаштування
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+
+// Змініть код лише під цим рядком
+firstLetterOfLastName = lastName[0]; // Змініть цей рядок
