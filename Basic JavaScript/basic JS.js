@@ -96,3 +96,14 @@ const removedFromMyArray = myArray.shift();
 //Перший елемент у кожному підмасиві повинен містити рядок з назвою одиниці.
 //Другим елементом повинне бути число, яке вказує кількість.
 const myList = [["baklajyan", 4],["ogyrec", 7],["piska", 3],["jopa", 2],["yyy", 2]];
+
+
+
+//Створіть функцію під назвою reusableFunction, яка друкує рядок Hi World на консоль.
+//Викличте функцію.
+
+function reusableFunction() {
+    console.log("Hi World");
+}
+reusableFunction()
+
