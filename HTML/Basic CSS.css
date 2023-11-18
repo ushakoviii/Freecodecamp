@@ -2,5 +2,31 @@ h1, h2, p {
     text-align: center;
 }
 body {
+    /*background-color: burlywood;*/
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+}
+.menu {
+    width: 80%;
     background-color: burlywood;
+    margin-right: auto;
+    margin-left: auto; /*центрует объект*/
+    padding-left: 20px; /*отступ содержимого*/
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 500px;
+}
+
+.flavor, .dessert {
+    width: 75%;
+    text-align: left; /*расположение текста*/
+}
+
+.price {
+    width: 25%;
+    text-align: right;
+}
+
+.item p {
+    display: inline-block;
 }
