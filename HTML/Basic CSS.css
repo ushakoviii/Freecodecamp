@@ -16,12 +16,12 @@ body {
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    max-width: 500px;
+     500px;
 }
 
 img {
     display: block;
-    margin-left: auto;
+    margin-left: max-width:auto;
     margin-right: auto;
     margin-top: -25px;
 }
