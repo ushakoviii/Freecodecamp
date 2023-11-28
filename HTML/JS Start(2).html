@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JS Start(2)</title>
 </head>
 <body>
+    <script>
+        let balance = 110;
+        document.write ('START', '<br>');
+        let productCost0 = window.prompt('How much product?');
+        if (balance >= productCost0) {
+            document.write('Product purchased', '<br>');
+            balance = balance - productCost0;
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
+        else {
+            document.write('Not enough money', '<br>');
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
 
+        let productCost1 = window.prompt('How much product?');
+        if (balance >= productCost1) {
+            document.write('Product purchased', '<br>');
+            balance = balance - productCost1;
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
+        else {
+            document.write('Not enough money', '<br>');
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
+
+        let productCost2 = window.prompt('How much product?');
+        if (balance >= productCost2) {
+            document.write('Product purchased', '<br>');
+            balance = balance - productCost2;
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
+        else {
+            document.write('Not enough money', '<br>');
+            document.write('Balance = ');
+            document.write(balance, '<br>');
+        }
+
+        document.write('END');
+    </script>
 </body>
 </html>
