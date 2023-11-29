@@ -9,49 +9,55 @@
 </body>
 </html>
 <script>
-  const word0 = "Wassup";
-  const word0translation = "Здарова";
-
-  const word1 = "Byu";
-  const word1translation = "Покеда";
-
-  const word2 = "Programmer";
-  const word2translation = "Програмист";
-
-  const wordsCount = 3;
-
-  const finishSuccessMessage =("Молодец");
-  const finishUnsuccessMessage =("Не молодец");
+    const vocabulary = {
+        words: {
+            word0: {
+            original: "Wassup",
+            translation: "Здарова",
+            },
+            word1: {
+                original: "Byu",
+                translation: "Пока",
+            },
+            word2: {
+                original: "Programmer",
+                translation: "Програмист",
+            },
+        },
+        wordsCount: 3,
+    }
+    const message = {
+        finishSuccess: "Молодец",
+        finishUnsuccess: "Не молодец",
+    }
 
   let correctAnswersCount = 0;
 
   const minPercent = 50;
-
   const correctPercent = 100;
 
-  const userAnswer0 = prompt (word0);
-  alert (userAnswer0 === word0translation);
-  if (userAnswer0 === word0translation) {
+  const userAnswer0 = prompt(vocabulary.words.word0.original);
+  alert (userAnswer0 === vocabulary.words.word0.translation);
+  if (userAnswer0 === vocabulary.words.word0.translation) {
     correctAnswersCount = correctAnswersCount + 1;
   }
-  const userAnswer1 = prompt (word1);
-  alert (userAnswer1 === word1translation);
-  if (userAnswer1 === word1translation) {
-    correctAnswersCount = correctAnswersCount + 1;
-  }
+  const userAnswer1 = prompt(vocabulary.words.word1.original);
+  alert (userAnswer1 === vocabulary.words.word1.translation);
+  if (userAnswer1 === vocabulary.words.word1.translation) {
+        correctAnswersCount = correctAnswersCount + 1;
+    }
+    const userAnswer2 = prompt(vocabulary.words.word2.original);
+    alert (userAnswer2 === vocabulary.words.word2.translation);
+    if (userAnswer2 === vocabulary.words.word2.translation) {
+        correctAnswersCount = correctAnswersCount + 1;
+    }
 
-  const userAnswer2 = prompt (word2);
-  alert (userAnswer2 === word2translation);
-  if (userAnswer2 === word2translation) {
-      correctAnswersCount = correctAnswersCount + 1;
-  }
-
-    const Percent = correctAnswersCount / wordsCount * 100;
+    const Percent = correctAnswersCount / vocabulary.wordsCount * 100;
 
   if (Percent > minPercent) {
-    alert (finishSuccessMessage);
+    alert (message.finishSuccess);
   } else {
-    alert (finishUnsuccessMessage);
+    alert (message.finishUnsuccess);
   }
 
 
