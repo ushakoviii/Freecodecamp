@@ -9,50 +9,38 @@
 </body>
 </html>
 <script>
-    const vocabulary = {
-        words: {
-            word0: {
-            original: "Wassup",
-            translation: "Здарова",
-            },
-            word1: {
-                original: "Byu",
-                translation: "Пока",
-            },
-            word2: {
-                original: "Programmer",
-                translation: "Програмист",
-            },
-        },
-        wordsCount: 3,
-    }
+    const words = [
+        {original: "Wassup", translation: "Здарова"},
+        {original: "Byu", translation: "Пока"},
+        {original: "Programmer", translation: "Програмист"}
+    ];
+
     const message = {
         finishSuccess: "Молодец",
         finishUnsuccess: "Не молодец",
-    }
+    };
 
   let correctAnswersCount = 0;
 
   const minPercent = 50;
   const correctPercent = 100;
 
-  const userAnswer0 = prompt(vocabulary.words.word0.original);
-  alert (userAnswer0 === vocabulary.words.word0.translation);
-  if (userAnswer0 === vocabulary.words.word0.translation) {
+  const userAnswer0 = prompt(words[0].original);
+  alert (userAnswer0 === words[0].translation);
+  if (userAnswer0 === words[0].translation) {
     correctAnswersCount = correctAnswersCount + 1;
   }
-  const userAnswer1 = prompt(vocabulary.words.word1.original);
-  alert (userAnswer1 === vocabulary.words.word1.translation);
-  if (userAnswer1 === vocabulary.words.word1.translation) {
+    const userAnswer1 = prompt(words[1].original);
+    alert (userAnswer1 === words[1].translation);
+    if (userAnswer1 === words[1].translation) {
         correctAnswersCount = correctAnswersCount + 1;
     }
-    const userAnswer2 = prompt(vocabulary.words.word2.original);
-    alert (userAnswer2 === vocabulary.words.word2.translation);
-    if (userAnswer2 === vocabulary.words.word2.translation) {
-        correctAnswersCount = correctAnswersCount + 1;
+    const userAnswer2 = prompt(words[2].original);
+    alert (userAnswer2 === words[2].translation);
+    if (userAnswer2 === words[2].translation) {
     }
 
-    const Percent = correctAnswersCount / vocabulary.wordsCount * 100;
+    const Percent = correctAnswersCount / words.length * correctPercent;
 
   if (Percent > minPercent) {
     alert (message.finishSuccess);
