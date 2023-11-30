@@ -9,6 +9,7 @@
 </body>
 </html>
 <script>
+
     const words = [
         {original: "Wassup", translation: "Здарова"},
         {original: "Byu", translation: "Пока"},
@@ -25,20 +26,14 @@
   const minPercent = 50;
   const correctPercent = 100;
 
-  const userAnswer0 = prompt(words[0].original);
-  alert (userAnswer0 === words[0].translation);
-  if (userAnswer0 === words[0].translation) {
-    correctAnswersCount = correctAnswersCount + 1;
+
+  for (let i = 0; i < words.length; i++) {
+      const userAnswer = prompt(words[i].original);
+      alert(userAnswer === words[i].translation);
+      if (userAnswer === words[i].translation) {
+          correctAnswersCount = correctAnswersCount + 1;
+      }
   }
-    const userAnswer1 = prompt(words[1].original);
-    alert (userAnswer1 === words[1].translation);
-    if (userAnswer1 === words[1].translation) {
-        correctAnswersCount = correctAnswersCount + 1;
-    }
-    const userAnswer2 = prompt(words[2].original);
-    alert (userAnswer2 === words[2].translation);
-    if (userAnswer2 === words[2].translation) {
-    }
 
     const Percent = correctAnswersCount / words.length * correctPercent;
 
