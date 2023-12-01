@@ -9,7 +9,15 @@
 </body>
 </html>
 <script>
-
+function startLesson(_words, _result) {
+    for (let i = 0; i < _words.length; i++) {
+        const userAnswer = prompt(_words[i].original);
+        alert(userAnswer === _words[i].translation);
+        if (userAnswer === _words[i].translation) {
+            correctAnswersCount = correctAnswersCount + 1;
+        }
+    }
+}
     const words = [
         {original: "Wassup", translation: "Здарова"},
         {original: "Byu", translation: "Пока"},
@@ -26,16 +34,7 @@
   const minPercent = 50;
   const correctPercent = 100;
 
-
-  for (let i = 0; i < words.length; i++) {
-      const userAnswer = prompt(words[i].original);
-      alert(userAnswer === words[i].translation);
-      if (userAnswer === words[i].translation) {
-          correctAnswersCount = correctAnswersCount + 1;
-      }
-  }
-
-    const Percent = correctAnswersCount / words.length * correctPercent;
+  const Percent = correctAnswersCount / words.length * correctPercent;
 
   if (Percent > minPercent) {
     alert (message.finishSuccess);
