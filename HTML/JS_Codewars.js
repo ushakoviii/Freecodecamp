@@ -34,6 +34,136 @@ var replaceDots = function(str) {
     return str.replace(/[\.\/]/g,'-');
 };
 
+//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22+22=9.
+
+function squareSum(numbers){
+    let sum = 0;
+    for (i=0; i < numbers.length; i++) {
+        sum += (numbers[i] * numbers[i])
+    }
+    return sum
+};
+
+//Bob needs a fast way to calculate the volume of a cuboid with three values: the length,
+// width and height of the cuboid. Write a function to help Bob with this calculation.
+
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        // your code here
+        let vol = 0
+        vol = length * width * height
+        return vol
+    }
+}
+
+// I'm new to coding and now I want to get the sum of two arrays...
+// Actually the sum of all their elements. I'll appreciate for your help.
+// P.S. Each array includes only integer numbers. Output is a number too.
+
+function arrayPlusArray(arr1, arr2) {
+
+    let sumArr1 = 0;
+    let sumArr2 = 0;
+    let sumArr = 0;
+    for (i=0; i < arr1.length; i++) {
+        sumArr1 += arr1[i]
+    };
+    for (n=0; n < arr2.length; n++) {
+        sumArr2 += arr2[n]
+    };
+    sumArr += sumArr1 + sumArr2;
+    return sumArr
+};
+
+//In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+// Your function will be tested with pre-made examples as well as random ones.
+// If you can, try writing it in one line of code.
+function findDifference(a, b) {
+    let sumA = 1;
+    let sumB = 1;
+    for (i=0; i < a.length; i++) {
+        sumA *= a[i]
+    }
+    for (n=0; n < b.length; n++) {
+        sumB *= b[n]
+    }
+    let summ1 = sumB - sumA
+    let summ2 = sumA - sumB
+    if (sumA < sumB) {
+        return summ1
+    }
+    else {
+        return summ2
+    }
+};
+//You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+function positiveSum(arr) {
+    let sumArr = 0;
+    for (n=0; n < arr.length; n++) {
+        if (arr[n] > 0) {
+            sumArr += arr[n]
+        }
+    }
+    return sumArr
+};
+
+//Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+// If the input is an empty array or is null, return an empty array.
+// Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+function countPositivesSumNegatives(input) {
+    let arrA = 0
+    let arrB = 0
+    for (n=0; n < input.length; n++) {
+        if (input[n] > 0) {
+            arrA += 1
+        }
+        else {
+            arrB -= (-input[n])
+        }
+    }
+    return [arrA, arrB]
+};
+
+//Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second
+// element is sum of negative numbers. 0 is neither positive nor negative.
+// If the input is an empty array or is null, return an empty array.
+// Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+if (input === null || input.length === 0) {
+    return [];
+}
+else {
+    let arrA = 0;
+    let arrB = 0;
+
+    for (n=0; n < input.length; n++) {
+        if (input[n] > 0) {
+            arrA ++
+        }
+        else {
+            arrB += input[n]
+        }
+    }
+
+}
+return [arrA, arrB];
+
+
+
+
+
+
+
 
 
 
